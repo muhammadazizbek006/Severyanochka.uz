@@ -1,7 +1,7 @@
 const products = [
     {
         id:1,
-        img:'../imgs/data/aksiya1.png',
+        img:'../../imgs/data/aksiya1.png',
         title:'Г/Ц Блинчики с мясом вес, Россия',
         asli:'44,50',
         dastavka:'50,50',
@@ -14,7 +14,7 @@ const products = [
         title:'Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-60%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -23,7 +23,7 @@ const products = [
         title:'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-20%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -32,7 +32,7 @@ const products = [
         title:'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-10%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -41,7 +41,7 @@ const products = [
         title:'Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-5%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -50,7 +50,7 @@ const products = [
         title:'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-20%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -59,7 +59,7 @@ const products = [
         title:'Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-12%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -68,7 +68,7 @@ const products = [
         title:'Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-15%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -77,7 +77,7 @@ const products = [
         title:'Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-55%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
     {
@@ -86,7 +86,7 @@ const products = [
         title:'Г/Ц Блинчики с мясом вес, Россия',
         asli:'44,50',
         dastavka:'50,50',
-        aksiya:'-50%',
+        aksiya:'-5%',
         yulduz:'⭐⭐⭐⭐⭐'
     },
 
