@@ -1,4 +1,4 @@
-const aksiya = [
+const products = [
     {
         id:1,
         img:'../imgs/data/aksiya1.png',
