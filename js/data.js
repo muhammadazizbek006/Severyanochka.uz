@@ -19,7 +19,7 @@ const aksiya = [
     },
     {
         id:3,
-        img:'../imgs/data/aksiya1.png',
+        img:'../imgs/data/aksiya6.png',
         title:'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
         asli:'44,50',
         dastavka:'50,50',
@@ -28,7 +28,7 @@ const aksiya = [
     },
     {
         id:4,
-        img:'../imgs/data/aksiya1.png',
+        img:'../imgs/data/aksiya5.png',
         title:'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...',
         asli:'44,50',
         dastavka:'50,50',
@@ -55,7 +55,7 @@ const aksiya = [
     },
     {
         id:7,
-        img:'../imgs/data/aksiya1.png',
+        img:'../imgs/data/aksiya2.png',
         title:'Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»',
         asli:'44,50',
         dastavka:'50,50',
@@ -64,7 +64,7 @@ const aksiya = [
     },
     {
         id:8,
-        img:'../imgs/data/aksiya1.png',
+        img:'../imgs/data/aksiya3.png',
         title:'Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»',
         asli:'44,50',
         dastavka:'50,50',
