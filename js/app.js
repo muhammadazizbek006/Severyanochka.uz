@@ -10,7 +10,7 @@ products.forEach((product) => {
     <button class="product-like-btn">
       <img class="product-like-img" src="../imgs/like.svg" alt="like">
     </button>
-    <div>
+    <div class='product-img'>
        <img src="${product.img}" alt="${product.title}">
     </div>
       <div class="product-info">
