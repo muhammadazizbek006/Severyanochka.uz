@@ -40,11 +40,21 @@ products.forEach((product) => {
 
 // Barcha "В корзину" tugmalarini olish
 const addProductButtons = document.querySelectorAll('.add-to-cart');
-
+const shopPage = document.querySelector('shop.html')
 
 // Har bir "В корзину" tugmasiga bosish voqeasini qo'shish
 addProductButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     button.classList.add('active-add-to-cart'); // Tugmaga klass qo'shish
+    const index = e.target.getAttribute('data-index');
+    const selektedProduct = products[index];
+
+    // maxsulotlarni localstrage ga saqlash 
+    localStorage.setItem('selektedProduct', JSON.stringify(selektedProduct));
+
+    // shop pagega yuborish
+    window.location = '/shop.html'
+    
   });
 });
+
