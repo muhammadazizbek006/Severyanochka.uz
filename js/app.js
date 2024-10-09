@@ -42,7 +42,7 @@ products.forEach((product) => {
 const addProductButtons = document.querySelectorAll('.add-to-cart');
 const shopPage = document.querySelector('shop.html')
 
-// Har bir "В корзину" tugmasiga bosish voqeasini qo'shish
+// Har bir  korzinkga  tugmasiga bosish voqeasini qo'shish
 addProductButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     button.classList.add('active-add-to-cart'); // Tugmaga klass qo'shish
