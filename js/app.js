@@ -38,8 +38,13 @@ products.forEach((product) => {
 });
 
 
-const addProduct = document.querySelector('.add-to-cart');
+// Barcha "В корзину" tugmalarini olish
+const addProductButtons = document.querySelectorAll('.add-to-cart');
 
-addProduct.addEventListener('click', (e) =>{
-  addProduct.classList.add('active-add-to-cart')
-})
+
+// Har bir "В корзину" tugmasiga bosish voqeasini qo'shish
+addProductButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    button.classList.add('active-add-to-cart'); // Tugmaga klass qo'shish
+  });
+});
