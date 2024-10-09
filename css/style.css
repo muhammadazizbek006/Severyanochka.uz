@@ -102,3 +102,102 @@ color: #414141;
 .hero{
     background-image: url('../imgs/hero.png');
 }
+
+.products-container{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(4 , auto);
+    column-gap: 40px;
+    row-gap: 120px;
+}
+
+.main{
+    background-color: #f5f8ec;
+}
+
+.product-card{
+    position: relative;
+    background-color: white;
+    list-style: none;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+.product-like-btn {
+    position: absolute;
+    right: 9px;
+    border: none;
+    backdrop-filter: blur();
+    background-color: rgb(255, 255, 255);
+    top: 9px;
+}
+.product-like-img {
+    border: none;
+}
+.product-info {
+    
+}
+.narx-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aslNarx {
+
+font-size: 18px;
+font-weight: 700;
+line-height: 27px;
+color: #414141;
+
+}
+.dastavkaNarx {
+
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+
+
+}
+.rating {
+    margin-bottom: 8px;
+}
+.add-to-cart {
+
+    width:100%;
+    height: 40px;
+    background: none;
+    border: 2px solid #70C05B;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    box-shadow: 1px 2px 4px 0px #0000001A;
+    color: #70C05B;
+}
+
+.spen{
+
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+color: #BFBFBF;
+
+}
+
+.product-title{
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: #414141;
+margin-bottom: 8px;
+}
