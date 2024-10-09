@@ -36,3 +36,10 @@ products.forEach((product) => {
   // Mahsulotni sahifaga qo'shish
   productsContainer.innerHTML += productCard;
 });
+
+
+const addProduct = document.querySelector('.add-to-cart');
+
+addProduct.addEventListener('click', (e) =>{
+  addProduct.classList.add('active-add-to-cart')
+})
