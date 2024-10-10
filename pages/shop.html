@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Do'kon</title>
 </head>
 <body>
-    ss
-    <script src="../js/data.js"></script>
-    <script src="../js/app.js"></script>
+    <h1>Tanlangan mahsulotlar</h1>
+    <ul id="selected-products"></ul>
+
+    <script>
+        const selectedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
+        const productList = document.getElementById('selected-products');
+        selectedProducts.forEach(product => {
+            const li = document.createElement('li');
+            li.textContent = product;
+            productList.appendChild(li);
+        });
+    </script>
 </body>
 </html>
