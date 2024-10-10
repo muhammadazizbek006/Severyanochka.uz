@@ -16,6 +16,7 @@ products.forEach((product) => {
       <div class="product-info">
 
       <div class='narx-wrapper'>
+
       <div>
       <p class="aslNarx">${product.asli} ₽</p>
       <span class='spen'>С картой</span>
