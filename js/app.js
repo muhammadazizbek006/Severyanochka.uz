@@ -38,20 +38,28 @@ products.forEach((product) => {
   productsContainer.innerHTML += productCard;
 });
 
-
 // Barcha "В корзину" tugmalarini olish
 const addProductButtons = document.querySelectorAll('.add-to-cart');
-const shopPage = document.querySelector('shop.html')
 
-// Har bir  korzinkga  tugmasiga bosish voqeasini qo'shish
-addProductButtons.forEach((button) => {
-  button.addEventListener('click', (e) => {
-    button.classList.add('active-add-to-cart'); // Tugmaga klass qo'shish
-    const index = e.target.getAttribute('data-index');
-    const selektedProduct = products[index];
+// Har bir korzinka tugmasiga bosish voqeasini qo'shish
+addProductButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // Tanlangan mahsulotni olish
+    const selectedProduct = products[index];
 
-   
-    
+    // Mahsulotlarni oldindan saqlangan ro'yxatni localStorage'dan olish
+    let selectedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
+
+    // Yangi tanlangan mahsulotni ro'yxatga qo'shish
+    selectedProducts.push(selectedProduct);
+
+    // Yangilangan ro'yxatni localStorage'da saqlash
+    localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
+
+    // Tugmaga klass qo'shish
+    button.classList.add('active-add-to-cart'); 
+
+    console.log(`Mahsulot qo'shildi:`, selectedProduct);
   });
 });
 

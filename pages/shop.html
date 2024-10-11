@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Do'kon</title>
 </head>
 <body>
@@ -11,11 +10,21 @@
     <ul id="selected-products"></ul>
 
     <script>
+        // LocalStorage'dan tanlangan mahsulotlarni olish
         const selectedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
+
+        // Mahsulotlar ro'yxatini chiqaradigan elementni topish
         const productList = document.getElementById('selected-products');
+
+        // Har bir tanlangan mahsulotni chiqarish
         selectedProducts.forEach(product => {
             const li = document.createElement('li');
-            li.textContent = product;
+            li.innerHTML = `
+                <img src="${product.img}" alt="${product.title}" width="50" />
+                <h3>${product.title}</h3>
+                <p>Asl Narx: ${product.asli} ₽</p>
+                <p>Dastavka Narx: ${product.dastavka} ₽</p>
+            `;
             productList.appendChild(li);
         });
     </script>
