@@ -37,7 +37,6 @@ products.forEach((product) => {
   // Mahsulotni sahifaga qo'shish
   productsContainer.innerHTML += productCard;
 });
-
 // Barcha "В корзину" tugmalarini olish
 const addProductButtons = document.querySelectorAll('.add-to-cart');
 
@@ -50,16 +49,24 @@ addProductButtons.forEach((button, index) => {
     // Mahsulotlarni oldindan saqlangan ro'yxatni localStorage'dan olish
     let selectedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
 
-    // Yangi tanlangan mahsulotni ro'yxatga qo'shish
-    selectedProducts.push(selectedProduct);
+    // Agar mahsulot allaqachon ro'yxatda bo'lsa, alert chiqarish
+    const isProductExists = selectedProducts.some(product => product.id === selectedProduct.id);
+    
+    if (isProductExists) {
+      alert(`Bu mahsulot allaqachon savatda: ${selectedProduct.title}`);
+    } else {
+      // Yangi tanlangan mahsulotni ro'yxatga qo'shish
+      selectedProducts.push(selectedProduct);
 
-    // Yangilangan ro'yxatni localStorage'da saqlash
-    localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
+      // Yangilangan ro'yxatni localStorage'da saqlash
+      localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
 
-    // Tugmaga klass qo'shish
-    button.classList.add('active-add-to-cart'); 
+      // Tugmaga klass qo'shish
+      button.classList.add('active-add-to-cart');
 
-    console.log(`Mahsulot qo'shildi:`, selectedProduct);
+      console.log(`Mahsulot qo'shildi:`, selectedProduct);
+    }
   });
 });
+
 
