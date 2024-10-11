@@ -50,11 +50,7 @@ addProductButtons.forEach((button) => {
     const index = e.target.getAttribute('data-index');
     const selektedProduct = products[index];
 
-    // maxsulotlarni localstrage ga saqlash 
-    localStorage.setItem('selektedProduct', JSON.stringify(selektedProduct));
-
-    // shop pagega yuborish
-    window.location = '/shop.html'
+   
     
   });
 });
