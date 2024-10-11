@@ -216,3 +216,69 @@ margin-bottom: 8px;
     align-items: center;
     margin-bottom: 8px;
 }
+
+
+.korzinka-title {
+font-size: 64px;
+font-weight: 700;
+line-height: 96px;
+margin-bottom: 60px;
+}
+
+.select-prodcuts-length {
+}
+
+.li-iteam-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.img-and-title-wrapper {
+    display: flex;
+}
+.img-wrap {
+margin-right: 8px;
+}
+
+.img{
+    width: 80px;
+    height: 72px;
+}
+.title-andprice-wrap {
+    
+}
+
+.kozinka-title{
+
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+color: #414141;
+margin-bottom: 2px;
+}
+
+.asl-narx-koriznka {
+}
+.dastavka-narx-koriznka {
+}
+.plus-andprice-wrapper {
+}
+.btn-plus-minus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.minus {
+    padding: 9px 19px ;
+    margin-right: 15px;
+}
+.count {
+    font-size: 18px;
+}
+.pilus {
+    margin-left: 15px;
+    padding: 9px 19px;
+}
+.umumiy {
+}
+.narx {
+}

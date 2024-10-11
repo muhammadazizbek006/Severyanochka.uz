@@ -4,12 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do'kon</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <h1>Tanlangan mahsulotlar</h1>
-    <ul id="selected-products"></ul>
+<body >
+        <!-- header -->
+        <header>
+            <div class="container wrapper">
+              <!-- left -->
+              <div class="header-left-wrapper">
+                <!-- logo and title -->
+                <a class="logo-link" href="">
+                  <img class="logo" src="../imgs/logo.svg" alt="logo" />
+                  <h1 class="title">Северяночка</h1>
+                </a>
+                <!-- katalog -->
+                <button class="katalog-wrapper">
+                  <img class="katalog-img" src="../imgs/menu.svg" alt="katalog" />
+                  <p class="katalog">Каталог</p>
+                </button>
+                <!-- input  wrapper -->
+                <div class="input-wrapper">
+                  <input class="header-iteam-input" type="search" placeholder="Найти товар" />
+                  <img class="input-search" src="../imgs/search.svg" alt="search" />
+                </div>
+              </div>
+      
+              <!-- right -->
+              <ul class="header-nav">
+                <li class="header-nav-iteam">
+                  <!-- 1 -->
+                  <a class="nav-link-iteam-link-wrapper" href="">
+                    <img class="nav-img" src="../imgs/like.svg" alt="like" />
+                    <p class="nav">Избранное</p>
+                  </a>
+                  <!-- 1 -->
+                  <a class="nav-link-iteam-link-wrapper" href="">
+                    <img class="nav-img" src="../imgs/zakaz.svg" alt="zakaz" />
+                    <p class="nav">Заказы</p>
+                  </a>
+                  <!-- 1 -->
+                  <a class="nav-link-iteam-link-wrapper" href="./shop.html">
+                    <img class="nav-img" src="../imgs/shop.svg" alt="shop" />
+                    <p class="nav">Корзина</p>
+                  </a>
+                  <!-- 1 -->
+                  <!-- <a class="nav-link-iteam-link-wrapper" href="">
+                    <img class="nav-img" src="../imgs/like.svg" alt="like" />
+                    <p class="nav">Избранное</p>
+                  </a> -->
+                </li>
+              </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div>
+                <h2 class="korzinka-title">Корзина</h2>
+                <span class="select-prodcuts-length">0</span>
+            </div>
+
+            <ul id="selected-products"></ul>
+
+        </div>
 
     <script>
+        const pilus = document.querySelectorAll('.pilus')
+        const minus = document.querySelectorAll('.minus')
+        const count = document.querySelectorAll('.count')
+
+        minus.forEach((minus, index) => {
+    minus.addEventListener("click", function() {
+        if (parseInt(count[index].textContent) > 1) {
+            count[index].textContent = (parseInt(count[index].textContent) - 1).toString();
+        }
+    });
+});
+
+pilus.forEach((pilus, index) => {
+    pilus.addEventListener("click", function() {
+        count[index].textContent = (parseInt(count[index].textContent) + 1).toString();
+
+    });
+});
+
+pilus.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      const summa = parseFloat(elsm[index].textContent.replace('$', ''));
+      elsm[index].textContent = `${(summa + 20).toFixed()} $`;
+    });
+  });
+  
+  minus.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      const summa = parseFloat(elsm[index].textContent.replace('$', ''));
+      if (summa > 20) {
+        elsm[index].textContent = `${(summa - 20).toFixed()}$`;
+      }
+    });
+  });
+  
+
         // LocalStorage'dan tanlangan mahsulotlarni olish
         const selectedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
 
@@ -20,10 +113,29 @@
         selectedProducts.forEach(product => {
             const li = document.createElement('li');
             li.innerHTML = `
-                <img src="${product.img}" alt="${product.title}" width="50" />
-                <h3>${product.title}</h3>
-                <p>Asl Narx: ${product.asli} ₽</p>
-                <p>Dastavka Narx: ${product.dastavka} ₽</p>
+                
+                            <div class="li-iteam-wrapper">
+                <!-- left -->
+                 <div class="img-and-title-wrapper">
+                        <div class="img-wrap">
+                            <img class='img' src="${product.img}" alt="${product.title}" width="50" />
+                        </div>
+                        <div class="title-andprice-wrap">
+                            <h3 class='kozinka-title'>${product.title}</h3>
+                            <p class="asl-narx-koriznka">Asl Narx: ${product.asli} ₽</p>
+                             <p class="dastavka-narx-koriznka">Dastavka Narx: ${product.dastavka} ₽</p>
+                        </div>
+                 </div>
+                 <!-- right -->
+                  <div class="plus-andprice-wrapper">
+                    <div class="btn-plus-minus">
+                        <button class="minus">-</button>
+                        <span class="count">1</span>
+                        <button class="pilus">+</button>
+                    </div>
+                    <span class="umumiy narx">33032</span>
+                  </div>
+            </div>
             `;
             productList.appendChild(li);
         });
