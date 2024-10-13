@@ -266,19 +266,39 @@ margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #70C05B;
+    border-radius: 12px;
 }
 .minus {
+    border-radius: 12px;
+
     padding: 9px 19px ;
     margin-right: 15px;
+    background-color: #70C05B;
+    border: none;
+    color: white;
+    font-size: 22px;
 }
 .count {
-    font-size: 18px;
+    color: white;
+    font-size: 22px;
 }
 .pilus {
+    border-radius: 12px;
+
+    color: white;
+    font-size: 22px;
     margin-left: 15px;
     padding: 9px 19px;
+    background-color: #70C05B;
+    border: none;
 }
 .umumiy {
 }
 .narx {
+}
+
+
+li{
+    list-style: none;
 }
